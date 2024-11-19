@@ -8,6 +8,15 @@ const props = defineProps({
         Required: true,
     },
 });
+const emit = defineEmits(['add-task']);
+
+const toggleComplete = (index) => {
+    props.tasks[index].completed = !props.tasks[index].completed;
+
+};
+const deleteTask = (index)  => {
+    props.tasks[index].completed = !props.tasks[index].completed;
+};
 
 </script>
 
