@@ -11,6 +11,15 @@ data(){
         tasks:[]
     };
 },
+methods:{
+    addTask(){
+        if(this.newTask.trim() ===''){
+            this.console.error = 'El titulo de la tarea no puede estar vacio';
+            return;
+        }
+        }
+    }
+}
 }
 
 
