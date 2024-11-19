@@ -1,7 +1,14 @@
 
 <script setup>
 import TodoList from './components/TodoList.vue';
+import InputTarea from './components/InputTarea.vue';
+import { ref } from 'vue';
 
+const tasks = ref([]);
+
+const addNewTask = (tasks)=>{
+  tasks.value.push(task);
+};
 </script>
 
 
@@ -18,13 +25,12 @@ import TodoList from './components/TodoList.vue';
   
 font-family: 'Times New Roman', Times, serif;
 text-align: center;
-margin-top 25px;
-}
-#h1{
-color: red;
-font-style: italic;
-}
 
+};
+#h1{
+color: red
+
+};
 
 
 </style>
