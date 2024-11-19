@@ -28,12 +28,12 @@ const deleteTask = (index) =>{
         v-for="(task, index) in tasks"
         :key="index"
         :class="{completed:task.completed}"
-        
-   
-   
-   
+        >
+        <span>{{ task.title }}</span>
+        <button @click="toggleComplete(index)">Completar</button>
+        <button @click="deleteTask(index)">Eliminar</button>
+        </li>
     </ul>
-
 </div>
 
 
