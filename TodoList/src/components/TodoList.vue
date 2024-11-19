@@ -21,7 +21,20 @@ const deleteTask = (index) =>{
 </script>
 
 <template>
+<div class="todo-list">
+    <h2> Tareas </h2>
+    <ul>
+        <li
+        v-for="(task, index) in tasks"
+        :key="index"
+        :class="{completed:task.completed}"
+        
+   
+   
+   
+    </ul>
 
+</div>
 
 
 

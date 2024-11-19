@@ -15,3 +15,9 @@ const addTask = () =>{
 };
 
 </script>
+<template>
+
+
+
+    
+</template>
