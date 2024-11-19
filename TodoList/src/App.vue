@@ -15,8 +15,9 @@ const addNewTask = (tasks)=>{
 <template>
   <div id="app">
     <h1>Lista de Tareas</h1>
+    <InputTarea @add-task="addNewTask"/>
     <!-- Aqui es donde integrar los componentes-->
-    <TodoList/>
+    <TodoList :tasks="tasks"/>
   </div>
 </template>
 
@@ -28,7 +29,8 @@ text-align: center;
 
 };
 #h1{
-color: red
+color: #f00;
+
 
 };
 
