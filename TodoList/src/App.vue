@@ -2,11 +2,6 @@
 <script setup>
 import TodoList from './components/TodoList.vue';
 
-
-export default{
-  name:"App"
-};
-
 </script>
 
 
