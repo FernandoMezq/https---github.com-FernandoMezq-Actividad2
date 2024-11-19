@@ -40,7 +40,19 @@ const deleteTask = (index) =>{
 
 </template>
 
-<style>
-
+<style scoped>
+.todo-list{
+    margin: 20px
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
 
 </style>
