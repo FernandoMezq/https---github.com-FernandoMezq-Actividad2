@@ -54,5 +54,7 @@ li{
     align-items: center;
     margin: 10px 0;
 }
-
+button{
+    margin-left: 10px;
+}
 </style>
