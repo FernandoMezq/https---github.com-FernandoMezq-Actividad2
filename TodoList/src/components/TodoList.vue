@@ -25,7 +25,7 @@ const deleteTask = (index) =>{
         <thead>
             <tr>
                 <th>Tarea</th>
-                <th>Acciones</th>
+                <th style="text-align: right;">Acciones</th>
             </tr>
         </thead>
    
@@ -35,8 +35,10 @@ const deleteTask = (index) =>{
             :class="{completed: task.completed}">
                 <td>{{ task.title }}</td>
                 <td>
-                    <button class="toggle-task" @click="toggleComplete(index)">Completar</button>
-                    <button class="delete-task" @click="deleteTask(index)">Eliminar</button>
+                    <div class="action-buttons">
+                        <button class="toggle-task" @click="toggleComplete(index)">Completar</button>
+                        <button class="delete-task" @click="deleteTask(index)">Eliminar</button>
+                    </div>    
                 </td>        
             </tr>
         </tbody>
@@ -56,18 +58,37 @@ h2{
     font-size: 1.5em;
 }
 
-ul{ width: 100%;
-    border-collapse: collapse;
+th,td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #35a;
+}
 
+td{text-align: left;}
+
+tr{
+    background-color: #f9f9f9;
+}
+
+.action-buttons{
+display: flex;
+justify-content: flex-end;
+gap: 10px;
 };
-ol
-
 
 button{
-    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+
 }
 .completed{
     text-decoration: line-through;
     color: red;
 }
+
+
+
+
 </style>

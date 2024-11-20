@@ -20,7 +20,8 @@ const addTask = () =>{
 </script>
 <template>
 <div class="input-tarea">
-<input
+
+    <input
     v-model="newTask"
     type="text"
     placeholder="Nueva Tarea"
@@ -47,14 +48,22 @@ input{
 }
 
 button{
-
     padding:10px;
-    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #0056b3;
 }
 .error-message{
     color: red;
     font-size: 12px;
     margin-top: 5px;
+    text-align: left;
 }
 
 </style>
