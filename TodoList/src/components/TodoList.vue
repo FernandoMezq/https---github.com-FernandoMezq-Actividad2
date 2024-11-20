@@ -21,38 +21,47 @@ const deleteTask = (index) =>{
 <template>
 <div class="todo-list">
     <h2> Tareas </h2>
-    <ul>
-        <li
-        v-for="(task, index) in tasks"
-        :key="index"
-        :class="{completed: task.completed}"
-        >
-        <span>{{ task.title }}</span>
-        <button @click="toggleComplete(index)">Completar</button>
-        <button @click="deleteTask(index)">Eliminar</button>
-        </li>
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Tarea</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+   
+        <tbody>
+            <tr v-for="(task, index) in tasks"
+            :key="index"
+            :class="{completed: task.completed}">
+                <td>{{ task.title }}</td>
+                <td>
+                    <button class="toggle-task" @click="toggleComplete(index)">Completar</button>
+                    <button class="delete-task" @click="deleteTask(index)">Eliminar</button>
+                </td>        
+            </tr>
+        </tbody>
+    </table>
 </div>
-
-
-
-
 </template>
 
 <style scoped>
 .todo-list{
-    margin: 20px
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-ul{
-    list-style-type: none;
-    padding: 0;
+
+h2{
+    margin-bottom: 15px;
+    font-size: 1.5em;
 }
-li{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-}
+
+ul{ width: 100%;
+    border-collapse: collapse;
+
+};
+ol
+
+
 button{
     margin-left: 10px;
 }
