@@ -30,3 +30,13 @@ const addTask = () =>{
 
 
 </template>
+<stile scoped>
+.input-tarea{
+    display: flex
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+
+</stile>
