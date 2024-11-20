@@ -48,6 +48,10 @@ button{
     padding:10px;
     margin-left: 10px;
 }
-
+.error-message{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
 
 </stile>
