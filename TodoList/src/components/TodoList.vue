@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
@@ -10,11 +10,10 @@ const props = defineProps({
 const emit = defineEmits(['toggle-task', 'delete-task']);
 
 const toggleComplete = (index) => {
-    props.tasks[index].completed = !props.tasks[index].completed;
-
+    emit('toggle-task', index);
 };
 const deleteTask = (index) =>{
-    props.tasks.splice(index, 1);
+    emit('delete-task', index);
 };
 
 </script>
@@ -26,7 +25,7 @@ const deleteTask = (index) =>{
         <li
         v-for="(task, index) in tasks"
         :key="index"
-        :class="{completed:task.completed}"
+        :class="{completed: task.completed}"
         >
         <span>{{ task.title }}</span>
         <button @click="toggleComplete(index)">Completar</button>
@@ -56,5 +55,9 @@ li{
 }
 button{
     margin-left: 10px;
+}
+.completed{
+    text-decoration: line-through;
+    color: red;
 }
 </style>

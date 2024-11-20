@@ -1,8 +1,10 @@
 <script setup>
-import {compile, ref} from 'vue';
+import { ref } from 'vue';
 
 const newTask = ref('');
 const error = ref(false);
+const emit = defineEmits(['add-task']);
+
 const addTask = () =>{
     if (newTask.value.trim() === ''){
         error.value = true;
@@ -10,6 +12,7 @@ const addTask = () =>{
     }
     error.value = false;
     emit('add-task',{title: newTask.value, completed: false});
+   
     newTask.value = '';
 
 };
@@ -21,7 +24,7 @@ const addTask = () =>{
     v-model="newTask"
     type="text"
     placeholder="Nueva Tarea"
-    @keyup.enter
+    @keyup.enter="addTask"
     />
     <button @click="addTask">Agregar</button>
     <p v-if="error" class="error-message">La tarea no puede estar vacia</p>
@@ -30,9 +33,9 @@ const addTask = () =>{
 
 
 </template>
-<stile scoped>
+<style scoped>
 .input-tarea{
-    display: flex
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
@@ -54,4 +57,4 @@ button{
     margin-top: 5px;
 }
 
-</stile>
+</style>

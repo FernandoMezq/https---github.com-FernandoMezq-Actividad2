@@ -9,15 +9,29 @@ const tasks = ref([]);
 const addNewTask = (task)=>{
   tasks.value.push(task);
 };
+
+const toggleTask = (index) =>{
+  tasks.value[index].completed = !tasks.value[index].completed;
+
+};
+const deleteTask = (index) => {
+  tasks.value.splice(index, 1);
+
+};
+
 </script>
 
 
 <template>
-  <div id="app">
+ <div id="app">
     <h1>Lista de Tareas</h1>
-    <InputTarea @add-task="addNewTask"/>
-    <!-- Aqui es donde integrar los componentes-->
-    <TodoList :tasks="tasks"/>
+    <InputTarea @add-task="addNewTask" />
+    <!-- Integrar el componente TodoList -->
+    <TodoList 
+  :tasks="tasks" 
+  @toggle-task="toggleTask" 
+  @delete-task="deleteTask" 
+/>
   </div>
 </template>
 
