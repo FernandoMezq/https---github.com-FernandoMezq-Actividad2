@@ -42,6 +42,7 @@ const deleteTask = (index) =>{
         </tbody>
     </table>
 </div>
+
 </template>
 
 <style scoped>
