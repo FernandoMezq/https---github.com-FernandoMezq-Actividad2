@@ -4,10 +4,10 @@ import { defineProps, defineEmits } from 'vue';
 const props = defineProps({
     tasks:{
         type: Array,
-        Required: true,
+        required: true,
     },
 });
-const emit = defineEmits(['add-task']);
+const emit = defineEmits(['toggle-task', 'delete-task']);
 
 const toggleComplete = (index) => {
     props.tasks[index].completed = !props.tasks[index].completed;

@@ -6,7 +6,7 @@ import { ref } from 'vue';
 
 const tasks = ref([]);
 
-const addNewTask = (tasks)=>{
+const addNewTask = (task)=>{
   tasks.value.push(task);
 };
 </script>
@@ -28,7 +28,7 @@ font-family: 'Times New Roman', Times, serif;
 text-align: center;
 
 };
-#h1{
+h1{
 color: #f00;
 
 
