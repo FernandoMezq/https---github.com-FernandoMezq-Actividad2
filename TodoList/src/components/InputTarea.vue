@@ -16,8 +16,14 @@ const addTask = () =>{
 
 </script>
 <template>
+<div class="input-tarea">
+<input
+    v-model="newTask"
+    type="text"
+    placeholder="Nueva Tarea"
+    @keyup.enter
+</div>
 
 
 
-    
 </template>
