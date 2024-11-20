@@ -38,5 +38,16 @@ const addTask = () =>{
     margin: 20px;
 }
 
+input{
+    padding: 10px;
+    width: 80%;
+}
+
+button{
+
+    padding:10px;
+    margin-left: 10px;
+}
+
 
 </stile>
