@@ -22,6 +22,9 @@ const addTask = () =>{
     type="text"
     placeholder="Nueva Tarea"
     @keyup.enter
+    />
+    <button @click="addTask">Agregar</button>
+    <p v-if="error" class="error-message">La tarea no puede estar vacia</p>
 </div>
 
 
